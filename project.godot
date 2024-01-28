@@ -18,12 +18,19 @@ config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
 window/stretch/mode="viewport"
 window/stretch/aspect="ignore"
 
 [dotnet]
 
 project/assembly_name="linaRPG"
+
+[gui]
+
+theme/custom_font="res://resources/font/gnyrwn971.ttf"
 
 [input]
 

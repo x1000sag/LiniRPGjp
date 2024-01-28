@@ -9,7 +9,7 @@ func highlight(active:bool):
 	highlighted = active
 
 func interacted(player):
-	$"../ui".start_dialog(phrase)
+	$"../dialog".start_dialog(phrase)
 	
 func _physics_process(delta):
 	if highlighted:

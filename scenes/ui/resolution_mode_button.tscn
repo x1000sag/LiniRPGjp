@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbenaubucvdpf"]
+[gd_scene load_steps=3 format=3 uid="uid://cbenaubucvdpf"]
 
 [ext_resource type="Script" path="res://scenes/ui/sripts/Resolution_Mode_Button.gd" id="1_wll1p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hm203"]
+font_size = 46
 
 [node name="Resolution_Mode_Button" type="Control"]
 layout_mode = 3
@@ -27,6 +30,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Resolution
 "
+label_settings = SubResource("LabelSettings_hm203")
 
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer2"]
 layout_mode = 2
@@ -34,3 +38,4 @@ layout_mode = 2
 [node name="OptionButton" type="OptionButton" parent="HBoxContainer2"]
 custom_minimum_size = Vector2(256, 64)
 layout_mode = 2
+theme_override_font_sizes/font_size = 46

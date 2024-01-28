@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ct87cjrs67r5v"]
-
-[ext_resource type="Script" path="res://scenes/components/script/Cumponent.gd" id="1_3h6md"]
-
-[node name="Cumponent" type="Node"]
-script = ExtResource("1_3h6md")

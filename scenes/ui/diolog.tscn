@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://6ngc6hxprc4r"]
+[gd_scene load_steps=3 format=3 uid="uid://6ngc6hxprc4r"]
 
 [ext_resource type="Script" path="res://scenes/ui/sripts/dialog.gd" id="1_xa5kv"]
-[ext_resource type="Texture2D" uid="uid://c36j7hk1icxmc" path="res://textures/dialog.png" id="2_xkr8q"]
-[ext_resource type="FontFile" uid="uid://bhliwey7oa433" path="res://resources/font/helvetica_regular.otf" id="3_47kjo"]
+[ext_resource type="Texture2D" uid="uid://bftmidwftkep5" path="res://resources/textures/dialog.png" id="2_icoqw"]
 
 [node name="dialog" type="CanvasLayer"]
 script = ExtResource("1_xa5kv")
@@ -25,20 +24,19 @@ anchor_bottom = 1.0
 offset_top = -0.104034
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_xkr8q")
-region_rect = Rect2(0.12178, -0.215633, 16.8913, 17.2967)
-patch_margin_left = 4
-patch_margin_top = 4
-patch_margin_right = 4
-patch_margin_bottom = 4
+texture = ExtResource("2_icoqw")
+region_rect = Rect2(0.12178, -0.215633, 3525.88, 640.216)
+patch_margin_left = 83
+patch_margin_top = 81
+patch_margin_right = 83
+patch_margin_bottom = 93
 
 [node name="RichTextLabel" type="RichTextLabel" parent="dialog/NinePatchRect"]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 3.0
-offset_right = 1152.0
-offset_bottom = 293.0
-theme_override_fonts/normal_font = ExtResource("3_47kjo")
-theme_override_font_sizes/normal_font_size = 36
+offset_left = 79.0
+offset_top = 60.0
+offset_right = 1829.0
+offset_bottom = 416.0
+theme_override_font_sizes/normal_font_size = 46
 shortcut_keys_enabled = false
 threaded = true
