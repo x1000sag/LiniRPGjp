@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1qo7ajql10xn"]
+
+[ext_resource type="PackedScene" uid="uid://dp8d1hsm6cm8w" path="res://scenes/ui/Settings.tscn" id="1_p2it8"]
+[ext_resource type="Script" path="res://scenes/ui/sripts/Window_button.gd" id="2_ikvqy"]
+[ext_resource type="PackedScene" uid="uid://cbenaubucvdpf" path="res://scenes/ui/resolution_mode_button.tscn" id="3_wpu1v"]
+
+[node name="Window_button" instance=ExtResource("1_p2it8")]
+script = ExtResource("2_ikvqy")
+
+[node name="HBoxContainer" parent="." index="0"]
+offset_left = 161.0
+offset_top = 59.0
+offset_right = 1005.0
+offset_bottom = 123.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="." index="1"]
+offset_left = 490.0
+offset_top = 388.0
+offset_right = 676.0
+offset_bottom = 455.0
+text = "Quit
+"
+
+[node name="Resolution_Mode_Button" parent="." index="2" instance=ExtResource("3_wpu1v")]
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

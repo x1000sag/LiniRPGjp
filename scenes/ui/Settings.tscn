@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dp8d1hsm6cm8w"]
+
+[node name="Setting_Tab" type="Node2D"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 22.0
+offset_top = 35.0
+offset_right = 866.0
+offset_bottom = 99.0
+theme_override_constants/separation = 160
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(264, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Screen Mode"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(256, 64)
+layout_mode = 2
