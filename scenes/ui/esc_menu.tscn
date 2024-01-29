@@ -1,10 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqg857kj66w2r"]
+[gd_scene load_steps=10 format=3 uid="uid://bqg857kj66w2r"]
 
 [ext_resource type="Script" path="res://scenes/ui/sripts/esc_menu.gd" id="1_4ioew"]
 [ext_resource type="Texture2D" uid="uid://b7cwcuwrowlb" path="res://resources/textures/ESC_bg.png" id="2_mm30j"]
+[ext_resource type="Texture2D" uid="uid://cdkdndi76mwa0" path="res://resources/textures/panel.jpg" id="3_41xud"]
 [ext_resource type="Texture2D" uid="uid://b14tu38mq1uo3" path="res://resources/textures/button_idle.png" id="3_f1fr2"]
 [ext_resource type="Texture2D" uid="uid://dx234ps1r3s3i" path="res://resources/textures/button_pressed.png" id="4_yexv4"]
 [ext_resource type="Texture2D" uid="uid://cljjmhx34x5rh" path="res://resources/textures/button_focused.png" id="5_ed0tf"]
+
+[sub_resource type="Theme" id="Theme_floi5"]
+Panel/styles/panel = null
 
 [sub_resource type="LabelSettings" id="LabelSettings_nxtrx"]
 font_size = 46
@@ -16,10 +20,27 @@ font_size = 60
 script = ExtResource("1_4ioew")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1920.0
-offset_bottom = 1080.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_mm30j")
 expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="NinePatchRect" parent="."]
+offset_left = 530.0
+offset_top = 141.0
+offset_right = 1399.0
+offset_bottom = 946.0
+theme = SubResource("Theme_floi5")
+texture = ExtResource("3_41xud")
+region_rect = Rect2(66, 51, 2525, 2118)
+patch_margin_left = 72
+patch_margin_top = 76
+patch_margin_right = 65
+patch_margin_bottom = 69
 
 [node name="Resume" type="TextureButton" parent="."]
 anchors_preset = 8
@@ -28,9 +49,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -350.0
-offset_top = -217.0
+offset_top = -150.0
 offset_right = 348.0
-offset_bottom = -107.0
+offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -52,6 +73,7 @@ label_settings = SubResource("LabelSettings_nxtrx")
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
+metadata/_edit_lock_ = true
 
 [node name="Settings" type="TextureButton" parent="."]
 anchors_preset = 8
@@ -60,9 +82,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -350.0
-offset_top = -30.0
+offset_top = 19.0
 offset_right = 348.0
-offset_bottom = 80.0
+offset_bottom = 129.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -84,6 +106,7 @@ label_settings = SubResource("LabelSettings_nxtrx")
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
+metadata/_edit_lock_ = true
 
 [node name="Exit" type="TextureButton" parent="."]
 anchors_preset = -1
@@ -92,9 +115,9 @@ anchor_top = 1.193
 anchor_right = 0.5
 anchor_bottom = 1.193
 offset_left = -350.0
-offset_top = -563.44
+offset_top = -550.44
 offset_right = 348.0
-offset_bottom = -453.44
+offset_bottom = -440.44
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -116,12 +139,13 @@ label_settings = SubResource("LabelSettings_nxtrx")
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
+metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="."]
 offset_left = 804.0
-offset_top = 132.0
+offset_top = 199.0
 offset_right = 1125.0
-offset_bottom = 258.0
+offset_bottom = 325.0
 text = "Pause"
 label_settings = SubResource("LabelSettings_64u6f")
 horizontal_alignment = 1

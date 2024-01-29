@@ -16,16 +16,16 @@ size = Vector2(175, 56)
 physics_material_override = SubResource("PhysicsMaterial_8wduo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
-position = Vector2(108, 430)
+position = Vector2(116, 583)
 shape = SubResource("RectangleShape2D_0wks6")
 
 [node name="MainCharacter" parent="." instance=ExtResource("1_a40uw")]
-position = Vector2(290, 430)
+position = Vector2(298, 583)
 speed = 10
 
 [node name="init_window_component" parent="." instance=ExtResource("2_h8mvf")]
 
 [node name="test_iteract_area" parent="." instance=ExtResource("3_6wx6q")]
-position = Vector2(1519, 430)
+position = Vector2(1527, 583)
 
 [node name="dialog" parent="." instance=ExtResource("4_jd0lo")]
