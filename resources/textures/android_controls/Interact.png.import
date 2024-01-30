@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b14tu38mq1uo3"
-path="res://.godot/imported/button_idle.png-38833b7b63c7cfbb00aa006ea85bd883.ctex"
+uid="uid://c3uvl2jtrwgix"
+path="res://.godot/imported/Interact.png-d45997af5ee99078a8821cbd5154b072.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/textures/button_idle.png"
-dest_files=["res://.godot/imported/button_idle.png-38833b7b63c7cfbb00aa006ea85bd883.ctex"]
+source_file="res://resources/textures/android_controls/Interact.png"
+dest_files=["res://.godot/imported/Interact.png-d45997af5ee99078a8821cbd5154b072.ctex"]
 
 [params]
 

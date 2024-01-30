@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cljjmhx34x5rh"
-path="res://.godot/imported/button_focused.png-907730db37979ad85a76151451faf95a.ctex"
+uid="uid://dnvfjbd4kveqd"
+path="res://.godot/imported/dialog_arrow.png-3556aa70058e9ef1e7577c1313f823c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/textures/button_focused.png"
-dest_files=["res://.godot/imported/button_focused.png-907730db37979ad85a76151451faf95a.ctex"]
+source_file="res://resources/textures/dialog/dialog_arrow.png"
+dest_files=["res://.godot/imported/dialog_arrow.png-3556aa70058e9ef1e7577c1313f823c8.ctex"]
 
 [params]
 
