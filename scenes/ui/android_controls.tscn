@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://ch5xms4qvyosu"]
+
+[ext_resource type="Texture2D" uid="uid://c3uvl2jtrwgix" path="res://resources/textures/android_controls/Interact.png" id="1_bkykj"]
+[ext_resource type="Script" path="res://scenes/ui/sripts/android_controls.gd" id="1_im1h1"]
+[ext_resource type="Texture2D" uid="uid://yd07jofs38s8" path="res://resources/textures/android_controls/right.png" id="2_y3g7i"]
+[ext_resource type="Texture2D" uid="uid://cnrxkrur1c2th" path="res://resources/textures/android_controls/Left.png" id="4_at5px"]
+[ext_resource type="Texture2D" uid="uid://dx7a50s751rn4" path="res://icon.svg" id="5_7bxxl"]
+
+[node name="android_controls" type="CanvasLayer"]
+script = ExtResource("1_im1h1")
+
+[node name="right" type="TextureButton" parent="."]
+offset_left = 477.0
+offset_top = 673.0
+offset_right = 783.0
+offset_bottom = 974.0
+texture_normal = ExtResource("2_y3g7i")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="interact" type="TextureButton" parent="."]
+offset_left = 1487.0
+offset_top = 673.0
+offset_right = 1789.0
+offset_bottom = 978.0
+texture_normal = ExtResource("1_bkykj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="left" type="TextureButton" parent="."]
+offset_left = 128.0
+offset_top = 673.0
+offset_right = 434.0
+offset_bottom = 974.0
+texture_normal = ExtResource("4_at5px")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="menu" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("5_7bxxl")
+
+[connection signal="button_down" from="right" to="." method="_on_right_button_down"]
+[connection signal="button_up" from="right" to="." method="_on_right_button_up"]
+[connection signal="button_down" from="interact" to="." method="_on_interact_button_down"]
+[connection signal="button_up" from="interact" to="." method="_on_interact_button_up"]
+[connection signal="button_down" from="left" to="." method="_on_left_button_down"]
+[connection signal="button_up" from="left" to="." method="_on_left_button_up"]
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

@@ -1,9 +1,9 @@
 extends Node2D
 
-@onready var Menu = preload("res://scenes/ui/Window_button.tscn")
+@onready var Menu = preload("res://scenes/ui/esc_menu.tscn")
 @onready var child=Menu.instantiate()
 @onready var option_button = $HBoxContainer/OptionButton as OptionButton
-signal Back_to_pause_menu
+
 
 const WINDOW_MODE_ARRAY : Array[String] = [
 	"Full-Screen",
@@ -39,6 +39,7 @@ func on_window_mode_selected(index : int) -> void:
 
 
 func _on_button_pressed():
+	get_parent().add_child(child)
 	queue_free()
 	
 	

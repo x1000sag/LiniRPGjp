@@ -1,5 +1,5 @@
 extends Area2D
-class_name interactive_area
+class_name interactive_class
 
 @export var phrase:String
 @onready var sprite:Sprite2D = $Sprite2D
