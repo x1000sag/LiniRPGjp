@@ -1,37 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://6ngc6hxprc4r"]
 
-[ext_resource type="Script" path="res://scenes/ui/sripts/dialog.gd" id="1_xa5kv"]
+[ext_resource type="Script" path="res://scenes/ui/scripts/dialog.gd" id="1_xa5kv"]
 [ext_resource type="Texture2D" uid="uid://bftmidwftkep5" path="res://resources/textures/dialog/dialog.png" id="2_icoqw"]
 [ext_resource type="Texture2D" uid="uid://dnvfjbd4kveqd" path="res://resources/textures/dialog/dialog_arrow.png" id="3_234x4"]
-
-[sub_resource type="Animation" id="Animation_ma70f"]
-resource_name = "main"
-length = 1.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6),
-"transitions": PackedFloat32Array(1, 0.5, 1, 1, 1),
-"update": 0,
-"values": [0, 1, 2, 1, 0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.4, 0.9, 1.4),
-"transitions": PackedFloat32Array(0.75, 1, 0.75),
-"update": 0,
-"values": [Vector2(1845, 224), Vector2(1845, 245), Vector2(1845, 224)]
-}
 
 [sub_resource type="Animation" id="Animation_rovug"]
 length = 0.001
@@ -58,6 +29,36 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1845, 223)]
+}
+
+[sub_resource type="Animation" id="Animation_ma70f"]
+resource_name = "main"
+length = 2.0
+loop_mode = 1
+step = 0.09
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.54, 0.63, 0.72, 0.81, 0.9, 0.99, 1.08, 1.17),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3, 4, 3, 2, 1, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.45, 0.81, 1.17),
+"transitions": PackedFloat32Array(0.75, 0.75, 0.75),
+"update": 0,
+"values": [Vector2(1845, 224), Vector2(1845, 245), Vector2(1845, 224)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uumt4"]
@@ -109,7 +110,7 @@ threaded = true
 position = Vector2(1845, 223)
 scale = Vector2(0.0985855, 0.138263)
 texture = ExtResource("3_234x4")
-hframes = 3
+hframes = 5
 region_rect = Rect2(78, 0, 3074, 641)
 region_filter_clip_enabled = true
 
