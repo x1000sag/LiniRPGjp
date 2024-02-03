@@ -28,15 +28,6 @@ window/stretch/aspect="ignore"
 
 project/assembly_name="linaRPG"
 
-[file_customization]
-
-folder_colors={
-"res://resources/": "orange",
-"res://scenes/characters/sсripts/": "red",
-"res://scenes/components/scripts/": "red",
-"res://scenes/ui/scripts/": "red"
-}
-
 [gui]
 
 theme/custom_font="res://resources/font/gnyrwn971.ttf"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cbenaubucvdpf"]
 
-[ext_resource type="Script" path="res://scenes/ui/scripts/Resolution_Mode_Button.gd" id="1_wll1p"]
+[ext_resource type="Script" path="res://scenes/ui/sripts/Resolution_Mode_Button.gd" id="1_wll1p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hm203"]
 font_size = 46
