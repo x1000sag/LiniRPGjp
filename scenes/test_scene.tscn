@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcqjyvh0j3s5b"]
+[gd_scene load_steps=8 format=3 uid="uid://bcqjyvh0j3s5b"]
 
 [ext_resource type="PackedScene" uid="uid://b3vxdciu3dyrk" path="res://scenes/characters/main_character.tscn" id="1_a40uw"]
 [ext_resource type="PackedScene" uid="uid://ct87cjrs67r5v" path="res://scenes/components/init_window_component.tscn" id="2_h8mvf"]
 [ext_resource type="PackedScene" uid="uid://yjiqvk3ke2nc" path="res://scenes/components/interactive_class.tscn" id="3_6wx6q"]
 [ext_resource type="PackedScene" uid="uid://6ngc6hxprc4r" path="res://scenes/ui/diolog.tscn" id="4_jd0lo"]
+[ext_resource type="PackedScene" uid="uid://ch5xms4qvyosu" path="res://scenes/ui/android_controls.tscn" id="5_ckwps"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8wduo"]
 
@@ -13,8 +14,6 @@ size = Vector2(175, 56)
 [node name="Test_scene" type="Node2D"]
 
 [node name="init_window_component" parent="." instance=ExtResource("2_h8mvf")]
-
-[node name="dialog" parent="." instance=ExtResource("4_jd0lo")]
 
 [node name="wall" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_8wduo")
@@ -29,3 +28,12 @@ speed = 10
 
 [node name="test_iteract_area" parent="." instance=ExtResource("3_6wx6q")]
 position = Vector2(1527, 583)
+
+[node name="android_controls" parent="." instance=ExtResource("5_ckwps")]
+
+[node name="dialog" parent="." instance=ExtResource("4_jd0lo")]
+
+[connection signal="an_left_s" from="android_controls" to="MainCharacter" method="_on_android_controls_an_left_s"]
+[connection signal="an_menu_s" from="android_controls" to="init_window_component" method="_on_android_controls_an_menu_s"]
+[connection signal="an_right_s" from="android_controls" to="MainCharacter" method="_on_android_controls_an_right_s"]
+[connection signal="an_use_s" from="android_controls" to="MainCharacter" method="_on_android_controls_an_use_s"]
