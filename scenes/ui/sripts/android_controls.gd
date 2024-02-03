@@ -3,7 +3,7 @@ extends CanvasLayer
 signal an_left_s(BOOL:bool)
 signal an_right_s(BOOL:bool)
 signal an_use_s(BOOL:bool)
-signal an_menu_s(BOOL:bool)
+signal an_menu_s()
 
 
 
@@ -33,9 +33,6 @@ func _on_left_button_up():
 	emit_signal("an_left_s", false)
 
 
-func _on_menu_button_down():
-	emit_signal("an_menu_s", true)
 
-
-func _on_menu_button_up():
-	emit_signal("an_menu_s", false)
+func _on_menu_pressed():
+	emit_signal("an_menu_s")

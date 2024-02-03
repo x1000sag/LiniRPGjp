@@ -19,7 +19,8 @@ func _input(event):
 	elif get_parent().has_node("Esc_Menu"):
 		if (event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE) or an_menu:
 			get_parent().get_node("Esc_Menu").queue_free()
+	an_menu = false
 
 
-func _on_android_controls_an_menu_s(BOOL):
-	an_menu = BOOL
+func _on_android_controls_an_menu_s():
+	an_menu = true

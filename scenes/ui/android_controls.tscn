@@ -47,5 +47,4 @@ texture_normal = ExtResource("5_7bxxl")
 [connection signal="button_up" from="interact" to="." method="_on_interact_button_up"]
 [connection signal="button_down" from="left" to="." method="_on_left_button_down"]
 [connection signal="button_up" from="left" to="." method="_on_left_button_up"]
-[connection signal="button_down" from="menu" to="." method="_on_menu_button_down"]
-[connection signal="button_up" from="menu" to="." method="_on_menu_button_up"]
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
