@@ -1,6 +1,5 @@
 extends CanvasLayer
 
-
 @onready var text = $dialog/NinePatchRect/RichTextLabel
 @onready var dialog_ui = $dialog
 #очередь фраз
@@ -9,7 +8,6 @@ extends CanvasLayer
 @onready var phrases = {
 	"test": ["_test_", "_test_item_"]
 }
-
 
 func start_dialog(dialog : String):
 	dialog_ui.visible = true
@@ -29,4 +27,3 @@ func _physics_process(delta):
 		else:
 			dialog_ui.visible = false
 			text.text = ""
-

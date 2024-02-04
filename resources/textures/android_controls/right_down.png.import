@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3uvl2jtrwgix"
-path="res://.godot/imported/interact.png-3be6d7a574679159b80a01e25023e1e2.ctex"
+uid="uid://0g3hieusm3v1"
+path="res://.godot/imported/right_down.png-dabcc26e9b99dc70eec9643ec2e86d93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/textures/android_controls/interact.png"
-dest_files=["res://.godot/imported/interact.png-3be6d7a574679159b80a01e25023e1e2.ctex"]
+source_file="res://resources/textures/android_controls/right_down.png"
+dest_files=["res://.godot/imported/right_down.png-dabcc26e9b99dc70eec9643ec2e86d93.ctex"]
 
 [params]
 

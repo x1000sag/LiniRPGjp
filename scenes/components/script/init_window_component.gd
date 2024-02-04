@@ -3,8 +3,10 @@ extends Node
 @onready var Menu = preload("res://scenes/ui/esc_menu.tscn")
 @onready var child=Menu.instantiate()
 var an_menu:bool
+# переменная, нужная для управления с телефонов
 
 func _input(event):
+#открытие паузы
 	if !get_parent().has_node("Esc_Menu") and !get_parent().has_node("Window_button"):
 		if (event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE) or an_menu:
 			Menu = preload("res://scenes/ui/esc_menu.tscn")
@@ -21,6 +23,6 @@ func _input(event):
 			get_parent().get_node("Esc_Menu").queue_free()
 	an_menu = false
 
-
+#управление с телефона
 func _on_android_controls_an_menu_s():
 	an_menu = true

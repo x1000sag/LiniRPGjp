@@ -1,4 +1,5 @@
 extends Node
+#В РАБОТЕ! @x1000sa
 
 #очередь фраз
 @onready var queue : Array
@@ -6,4 +7,3 @@ extends Node
 @onready var phrases = {
 	"test": ["_test_", "_test_item_"]
 }
-

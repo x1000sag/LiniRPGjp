@@ -4,14 +4,12 @@ extends Node2D
 @onready var child=Menu.instantiate()
 @onready var option_button = $HBoxContainer/OptionButton as OptionButton
 
-
 const WINDOW_MODE_ARRAY : Array[String] = [
 	"Full-Screen",
 	"Window mode",
 	"Borderless",
 	"Borderless full-Screen"
 ]
-
 
 func _ready():
 	add_window_mode_items()
@@ -34,14 +32,8 @@ func on_window_mode_selected(index : int) -> void:
 			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
 		3: #Borderless full-Screen
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)	 
-
-
+			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
 
 func _on_button_pressed():
 	get_parent().add_child(child)
 	queue_free()
-	
-	
-	
-

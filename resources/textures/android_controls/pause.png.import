@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqin5qxsg4ih0"
-path="res://.godot/imported/Left.png-074027c6621f71bc6ead9b20b510b578.ctex"
+uid="uid://gda0ilyfvq6v"
+path="res://.godot/imported/pause.png-5f222e52218372915aac4bde7db96cb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Left.png"
-dest_files=["res://.godot/imported/Left.png-074027c6621f71bc6ead9b20b510b578.ctex"]
+source_file="res://resources/textures/android_controls/pause.png"
+dest_files=["res://.godot/imported/pause.png-5f222e52218372915aac4bde7db96cb9.ctex"]
 
 [params]
 

@@ -24,12 +24,13 @@ shape = SubResource("RectangleShape2D_0wks6")
 
 [node name="MainCharacter" parent="." instance=ExtResource("1_a40uw")]
 position = Vector2(298, 583)
-speed = 10
+speed = 1000
 
 [node name="test_iteract_area" parent="." instance=ExtResource("3_6wx6q")]
 position = Vector2(1527, 583)
 
 [node name="android_controls" parent="." instance=ExtResource("5_ckwps")]
+visible = false
 
 [node name="dialog" parent="." instance=ExtResource("4_jd0lo")]
 
