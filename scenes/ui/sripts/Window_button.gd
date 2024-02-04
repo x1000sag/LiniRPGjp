@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var Menu = preload("res://scenes/ui/esc_menu.tscn")
 @onready var child=Menu.instantiate()

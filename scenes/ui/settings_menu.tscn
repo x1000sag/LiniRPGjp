@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnmdb327x3m5o"]
+
+[ext_resource type="PackedScene" uid="uid://d1qo7ajql10xn" path="res://scenes/ui/Window_button.tscn" id="1_wdhfu"]
+
+[node name="settings" type="CanvasLayer"]
+
+[node name="Window_button" parent="." instance=ExtResource("1_wdhfu")]

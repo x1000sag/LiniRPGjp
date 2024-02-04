@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://dp8d1hsm6cm8w"]
 
-[node name="Setting_Tab" type="Node2D"]
+[node name="Setting_Tab" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
 offset_left = 22.0
 offset_top = 35.0
 offset_right = 866.0

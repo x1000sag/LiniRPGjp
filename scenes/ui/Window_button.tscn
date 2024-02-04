@@ -22,6 +22,7 @@ font_size = 60
 script = ExtResource("2_ikvqy")
 
 [node name="TextureRect" type="TextureRect" parent="." index="0"]
+layout_mode = 0
 offset_right = 1919.0
 offset_bottom = 1080.0
 texture = ExtResource("3_vajqh")
@@ -29,7 +30,7 @@ expand_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." index="1"]
-anchors_preset = 8
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -44,6 +45,7 @@ texture = ExtResource("4_pbqkr")
 region_rect = Rect2(66, 51, 2525, 2118)
 
 [node name="HBoxContainer" parent="." index="2"]
+layout_mode = 0
 offset_left = 540.0
 offset_top = 339.0
 offset_right = 1384.0
@@ -58,6 +60,7 @@ label_settings = SubResource("LabelSettings_4fvhf")
 theme_override_font_sizes/font_size = 46
 
 [node name="Button" type="TextureButton" parent="." index="3"]
+layout_mode = 0
 offset_left = 777.0
 offset_top = 774.0
 offset_right = 1143.0
@@ -82,12 +85,14 @@ vertical_alignment = 1
 metadata/_edit_lock_ = true
 
 [node name="Resolution_Mode_Button" parent="." index="4" instance=ExtResource("3_wpu1v")]
+layout_mode = 1
 offset_left = 379.0
 offset_top = 280.0
 offset_right = 379.0
 offset_bottom = 280.0
 
 [node name="Label" type="Label" parent="." index="5"]
+layout_mode = 0
 offset_left = 804.0
 offset_top = 146.0
 offset_right = 1101.0
