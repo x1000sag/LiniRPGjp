@@ -11,10 +11,14 @@ config_version=5
 [application]
 
 config/name="linaRPG"
-config/version="0.001"
+config/version="0.0011"
 run/main_scene="res://scenes/test_scene.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GD="*res://scenes/components/script/GLOBAL_DIALOG.gd"
 
 [display]
 

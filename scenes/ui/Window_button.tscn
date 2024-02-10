@@ -45,7 +45,6 @@ texture = ExtResource("4_pbqkr")
 region_rect = Rect2(66, 51, 2525, 2118)
 
 [node name="HBoxContainer" parent="." index="2"]
-layout_mode = 0
 offset_left = 540.0
 offset_top = 339.0
 offset_right = 1384.0
