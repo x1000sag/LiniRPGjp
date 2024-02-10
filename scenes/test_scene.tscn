@@ -19,6 +19,7 @@ visible = false
 [node name="init_window_component" parent="." instance=ExtResource("2_h8mvf")]
 
 [node name="dialog" parent="." instance=ExtResource("4_jd0lo")]
+unique_name_in_owner = true
 
 [node name="wall" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_8wduo")

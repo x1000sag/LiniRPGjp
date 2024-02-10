@@ -32,6 +32,12 @@ window/stretch/aspect="ignore"
 
 project/assembly_name="linaRPG"
 
+[file_customization]
+
+folder_colors={
+"res://resources/": "gray"
+}
+
 [gui]
 
 theme/custom_font="res://resources/font/gnyrwn971.ttf"
