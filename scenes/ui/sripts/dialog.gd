@@ -12,7 +12,7 @@ func start_dialog(dialog : String):
 			text.text = GD.queue[0]
 			GD.queue.erase(text.text)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 #	переход на следующую фразу
 	if Input.is_action_just_pressed("click") and dialog_ui.visible:
 		if GD.queue.size() != 0:
@@ -21,3 +21,4 @@ func _physics_process(delta):
 		else:
 			dialog_ui.visible = false
 			text.text = ""
+			GD.emit_signal("dialog_ended")

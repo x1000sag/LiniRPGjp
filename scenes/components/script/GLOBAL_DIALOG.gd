@@ -1,6 +1,6 @@
 extends Node
 #В РАБОТЕ! @x1000sa
-
+signal dialog_ended
 #очередь фраз
 @onready var queue : Array
 #теги для диалога(список фраз нужные для диалога)
