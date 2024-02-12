@@ -7,19 +7,18 @@ class_name interactive_class_area
 @onready var sprite:Sprite2D = $Sprite2D
 var highlighted:bool = false
 
-func _ready():
-	GD.dialog_ended.connect(dialog_ended)
-
 #Нужна для подсветки объёкта; вызывается гг
 func highlight(active:bool):
 	highlighted = active
 
 #функция при взаимодействии с предметом
-func interacted(player):
-	%dialog.start_dialog(phrase)
+func interacted(_player):
+	if GD.queue.size() == 0:
+		GD.dialog_ended.connect(dialog_ended)
+		%dialog.start_dialog(phrase)
 #вызывается после диалога
 func dialog_ended():
-	pass
+	GD.dialog_ended.disconnect(dialog_ended)
 
 #подсвечивание при приближении гг
 func _physics_process(_delta):

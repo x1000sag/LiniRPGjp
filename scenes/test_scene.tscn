@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcqjyvh0j3s5b"]
+[gd_scene load_steps=9 format=3 uid="uid://bcqjyvh0j3s5b"]
 
 [ext_resource type="PackedScene" uid="uid://b3vxdciu3dyrk" path="res://scenes/characters/main_character.tscn" id="1_a40uw"]
 [ext_resource type="PackedScene" uid="uid://ct87cjrs67r5v" path="res://scenes/components/init_window_component.tscn" id="2_h8mvf"]
 [ext_resource type="PackedScene" uid="uid://yjiqvk3ke2nc" path="res://scenes/components/interactive_class.tscn" id="3_6wx6q"]
 [ext_resource type="PackedScene" uid="uid://6ngc6hxprc4r" path="res://scenes/ui/diolog.tscn" id="4_jd0lo"]
 [ext_resource type="PackedScene" uid="uid://ch5xms4qvyosu" path="res://scenes/ui/android_controls.tscn" id="5_ckwps"]
+[ext_resource type="PackedScene" uid="uid://cruv3g0shm65o" path="res://scenes/components/gain_item_test.tscn" id="6_blh3e"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8wduo"]
 
@@ -33,7 +34,13 @@ position = Vector2(298, 583)
 speed = 500
 
 [node name="test_iteract_area" parent="." instance=ExtResource("3_6wx6q")]
-position = Vector2(1527, 583)
+position = Vector2(1072, 583)
+
+[node name="gain_item_test" parent="." instance=ExtResource("6_blh3e")]
+position = Vector2(1695, 583)
+collision_layer = 2
+collision_mask = 2
+phrase = "test"
 
 [connection signal="an_left_s" from="android_controls" to="MainCharacter" method="_on_android_controls_an_left_s"]
 [connection signal="an_menu_s" from="android_controls" to="init_window_component" method="_on_android_controls_an_menu_s"]
