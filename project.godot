@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 
 GD="*res://scenes/components/script/GLOBAL_DIALOG.gd"
 PD="*res://scenes/components/script/PLAYER_DATA.gd"
+SC="*res://scenes/components/script/SIZE_CORECTION.gd"
 
 [display]
 

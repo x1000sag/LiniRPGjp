@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://b3vxdciu3dyrk"]
+[gd_scene load_steps=16 format=3 uid="uid://b3vxdciu3dyrk"]
 
 [ext_resource type="Script" path="res://scenes/characters/sripts/main_character.gd" id="1_c64iq"]
 [ext_resource type="Shader" path="res://shader.gdshader" id="2_nq1lg"]
 [ext_resource type="Texture2D" uid="uid://dx7a50s751rn4" path="res://icon.svg" id="2_xkxww"]
+[ext_resource type="Script" path="res://scenes/components/script/sprite_class.gd" id="4_p601h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_63yul"]
 shader = ExtResource("2_nq1lg")
@@ -92,6 +93,8 @@ script = ExtResource("1_c64iq")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_63yul")
 texture = ExtResource("2_xkxww")
+region_filter_clip_enabled = true
+script = ExtResource("4_p601h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_wmpmw")
