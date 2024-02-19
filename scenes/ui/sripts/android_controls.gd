@@ -8,10 +8,10 @@ signal an_use_s(BOOL:bool)
 signal an_menu_s()
 
 func _ready():
-	$right.scale = Vector2(SC.x1, SC.y1)
-	$interact.scale = Vector2(SC.x1, SC.y1)
-	$left.scale = Vector2(SC.x1, SC.y1)
-	$menu.scale = Vector2(SC.x1, SC.y1)
+	$right.scale = SC.current_aspect
+	$interact.scale = SC.current_aspect
+	$left.scale = SC.current_aspect
+	$menu.scale = SC.current_aspect
 
 func _on_right_button_down():
 	emit_signal("an_right_s", true)

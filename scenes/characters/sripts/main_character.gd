@@ -10,6 +10,9 @@ var an_right:bool
 var an_interact:bool
 var an_left:bool
 
+func _ready():
+	$Sprite2D.scale = SC.current_aspect
+
 func _physics_process(delta):
 #движение
 	if Input.is_action_pressed("right") or an_right:

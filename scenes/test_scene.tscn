@@ -15,7 +15,6 @@ size = Vector2(175, 56)
 [node name="Test_scene" type="Node2D"]
 
 [node name="android_controls" parent="." instance=ExtResource("5_ckwps")]
-visible = false
 
 [node name="init_window_component" parent="." instance=ExtResource("2_h8mvf")]
 
@@ -30,7 +29,7 @@ position = Vector2(116, 583)
 shape = SubResource("RectangleShape2D_0wks6")
 
 [node name="MainCharacter" parent="." instance=ExtResource("1_a40uw")]
-position = Vector2(298, 583)
+position = Vector2(477, 583)
 speed = 500
 
 [node name="test_iteract_area" parent="." instance=ExtResource("3_6wx6q")]
@@ -41,6 +40,9 @@ position = Vector2(1695, 583)
 collision_layer = 2
 collision_mask = 2
 phrase = "test"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
 
 [connection signal="an_left_s" from="android_controls" to="MainCharacter" method="_on_android_controls_an_left_s"]
 [connection signal="an_menu_s" from="android_controls" to="init_window_component" method="_on_android_controls_an_menu_s"]
