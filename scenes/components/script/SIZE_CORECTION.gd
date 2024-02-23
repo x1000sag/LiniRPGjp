@@ -45,4 +45,3 @@ func _ready():
 				current_aspect = pc3
 			4.0/3.0:
 				current_aspect = pc4
-		OS.alert("Текущее соотношеніе сторонъ " + str(float(resolution.x) / float(resolution.y)) + "\n " + str(resolution) + "\n " + str(current_aspect *Vector2(x,y)), "Проверка опрделенія разрешенія")
