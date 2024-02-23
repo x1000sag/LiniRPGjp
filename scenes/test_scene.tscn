@@ -19,7 +19,7 @@ size = Vector2(215.5, 1081)
 shader = ExtResource("6_f2hy8")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0g0px"]
-size = Vector2(95.5, 1097)
+size = Vector2(157, 1097)
 
 [node name="Test_scene" type="Node2D"]
 
@@ -80,7 +80,7 @@ phrase = "test"
 [node name="camera_control" parent="." instance=ExtResource("9_b7nie")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="camera_control"]
-position = Vector2(1763.25, 538.5)
+position = Vector2(1920, 538.5)
 shape = SubResource("RectangleShape2D_0g0px")
 debug_color = Color(0.258824, 0.635294, 0, 0)
 
