@@ -22,6 +22,7 @@ G="*res://scenes/components/script/GLOBAL.gd"
 GD="*res://scenes/components/script/GLOBAL_DIALOG.gd"
 PD="*res://scenes/components/script/PLAYER_DATA.gd"
 SC="*res://scenes/components/script/SIZE_CORECTION.gd"
+I="*res://scenes/components/script/ITEMS.gd"
 
 [display]
 

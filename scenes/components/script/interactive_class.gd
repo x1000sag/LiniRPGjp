@@ -4,6 +4,7 @@ class_name interactive_class_area
 #взаимодействие с интерактивными объектами происходит на втором слое "interactive"!
 
 @export var phrase:String
+@export var option_set:String
 @onready var sprite:Sprite2D = $Sprite2D
 var highlighted:bool = false
 

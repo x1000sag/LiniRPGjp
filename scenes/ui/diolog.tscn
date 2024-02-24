@@ -1,8 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://6ngc6hxprc4r"]
+[gd_scene load_steps=13 format=3 uid="uid://6ngc6hxprc4r"]
 
 [ext_resource type="Script" path="res://scenes/ui/sripts/dialog.gd" id="1_xa5kv"]
 [ext_resource type="Texture2D" uid="uid://bftmidwftkep5" path="res://resources/textures/dialog/dialog.png" id="2_icoqw"]
 [ext_resource type="Texture2D" uid="uid://dnvfjbd4kveqd" path="res://resources/textures/dialog/dialog_arrow.png" id="3_234x4"]
+[ext_resource type="Texture2D" uid="uid://b14tu38mq1uo3" path="res://resources/textures/button/button_idle.png" id="4_6x6jd"]
+[ext_resource type="Texture2D" uid="uid://dx234ps1r3s3i" path="res://resources/textures/button/button_pressed.png" id="5_26fkx"]
+[ext_resource type="Texture2D" uid="uid://cljjmhx34x5rh" path="res://resources/textures/button/button_focused.png" id="6_2xn4y"]
+[ext_resource type="FontFile" uid="uid://ey7dh2fxg54i" path="res://resources/font/gnyrwn971.ttf" id="7_cto4e"]
 
 [sub_resource type="Animation" id="Animation_rovug"]
 length = 0.001
@@ -67,6 +71,15 @@ _data = {
 "main": SubResource("Animation_ma70f")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_5o2b8"]
+font = ExtResource("7_cto4e")
+font_size = 40
+shadow_color = Color(0, 0, 0, 0.635294)
+
+[sub_resource type="LabelSettings" id="LabelSettings_im64t"]
+font = ExtResource("7_cto4e")
+font_size = 40
+
 [node name="dialog" type="CanvasLayer"]
 script = ExtResource("1_xa5kv")
 
@@ -119,3 +132,83 @@ libraries = {
 "": SubResource("AnimationLibrary_uumt4")
 }
 autoplay = "main"
+
+[node name="Label" type="Label" parent="dialog/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -348.0
+offset_top = 56.0
+offset_right = 348.0
+offset_bottom = 99.0
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_5o2b8")
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="choice" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 647.0
+
+[node name="option1" type="TextureButton" parent="choice"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -536.0
+offset_top = 121.0
+offset_right = 536.0
+offset_bottom = 290.0
+grow_horizontal = 2
+texture_normal = ExtResource("4_6x6jd")
+texture_pressed = ExtResource("5_26fkx")
+texture_hover = ExtResource("6_2xn4y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="choice/option1"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 28.0
+offset_right = 1045.0
+offset_bottom = 146.0
+label_settings = SubResource("LabelSettings_im64t")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+
+[node name="option2" type="TextureButton" parent="choice"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -536.0
+offset_top = 407.0
+offset_right = 536.0
+offset_bottom = 576.0
+grow_horizontal = 2
+texture_normal = ExtResource("4_6x6jd")
+texture_pressed = ExtResource("5_26fkx")
+texture_hover = ExtResource("6_2xn4y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="choice/option2"]
+offset_left = 36.0
+offset_top = 28.0
+offset_right = 1045.0
+offset_bottom = 146.0
+label_settings = SubResource("LabelSettings_im64t")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+
+[connection signal="pressed" from="choice/option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="choice/option2" to="." method="_on_option_2_pressed"]

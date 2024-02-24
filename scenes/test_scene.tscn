@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bcqjyvh0j3s5b"]
+[gd_scene load_steps=15 format=3 uid="uid://bcqjyvh0j3s5b"]
 
 [ext_resource type="PackedScene" uid="uid://b3vxdciu3dyrk" path="res://scenes/characters/main_character.tscn" id="1_a40uw"]
 [ext_resource type="PackedScene" uid="uid://ct87cjrs67r5v" path="res://scenes/components/init_window_component.tscn" id="2_h8mvf"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ch5xms4qvyosu" path="res://scenes/ui/android_controls.tscn" id="5_ckwps"]
 [ext_resource type="PackedScene" uid="uid://cruv3g0shm65o" path="res://scenes/components/gain_item_test.tscn" id="6_blh3e"]
 [ext_resource type="Shader" path="res://shader.gdshader" id="6_f2hy8"]
+[ext_resource type="Script" path="res://scenes/components/script/test_interact_area.gd" id="8_x1qvo"]
 [ext_resource type="PackedScene" uid="uid://clf436w0481cd" path="res://scenes/components/camera_control.tscn" id="9_b7nie"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8wduo"]
@@ -19,7 +20,7 @@ size = Vector2(215.5, 1081)
 shader = ExtResource("6_f2hy8")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0g0px"]
-size = Vector2(34, 1097)
+size = Vector2(104, 1097)
 
 [node name="Test_scene" type="Node2D"]
 
@@ -71,6 +72,8 @@ speed = 500
 
 [node name="test_iteract_area" parent="." instance=ExtResource("3_6wx6q")]
 position = Vector2(3144, 583)
+script = ExtResource("8_x1qvo")
+option_set = "test_set"
 
 [node name="gain_item_test" parent="." instance=ExtResource("6_blh3e")]
 position = Vector2(1600, 583)
@@ -81,7 +84,7 @@ phrase = "test"
 [node name="camera_control" parent="." instance=ExtResource("9_b7nie")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="camera_control"]
-position = Vector2(1714, 538.5)
+position = Vector2(1871, 538.5)
 shape = SubResource("RectangleShape2D_0g0px")
 debug_color = Color(0.258824, 0.635294, 0, 0)
 
