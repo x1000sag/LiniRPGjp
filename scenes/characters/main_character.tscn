@@ -8,7 +8,7 @@
 shader = ExtResource("2_nq1lg")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wmpmw"]
-size = Vector2(126, 128)
+size = Vector2(127, 128)
 
 [sub_resource type="Animation" id="Animation_0u7h5"]
 length = 0.001
@@ -95,6 +95,7 @@ texture = ExtResource("3_ewlbi")
 region_filter_clip_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12.5, 0)
 shape = SubResource("RectangleShape2D_wmpmw")
 debug_color = Color(0, 0.6, 0.701961, 0)
 
