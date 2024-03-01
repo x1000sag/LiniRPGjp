@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://cu4uf15nng3eu"]
+
+[ext_resource type="PackedScene" uid="uid://ct87cjrs67r5v" path="res://scenes/components/init_window_component.tscn" id="1_h83ta"]
+[ext_resource type="Script" path="res://scenes/locations_and_cutscenes/cut_scene1.gd" id="1_xgx4f"]
+[ext_resource type="PackedScene" uid="uid://6ngc6hxprc4r" path="res://scenes/ui/diolog.tscn" id="2_h2pc0"]
+[ext_resource type="PackedScene" uid="uid://ch5xms4qvyosu" path="res://scenes/ui/android_controls.tscn" id="3_p32ik"]
+[ext_resource type="Texture2D" uid="uid://d267odyiioswu" path="res://resources/textures/cut_scenes/cut_scene_1.png" id="4_lxuu5"]
+
+[node name="CutScene1" type="Node2D"]
+script = ExtResource("1_xgx4f")
+
+[node name="init_window_component" parent="." instance=ExtResource("1_h83ta")]
+
+[node name="dialog" parent="." instance=ExtResource("2_h2pc0")]
+
+[node name="android_controls" parent="." instance=ExtResource("3_p32ik")]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("4_lxuu5")
+centered = false

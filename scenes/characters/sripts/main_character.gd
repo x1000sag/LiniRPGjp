@@ -11,6 +11,8 @@ var an_interact:bool
 var an_left:bool
 
 func _ready():
+	$AnimationPlayer/AnimationTree.active = true
+	$AnimationPlayer.active = true
 	$Sprite2D.scale = SC.current_aspect
 
 func _physics_process(delta):
@@ -18,10 +20,16 @@ func _physics_process(delta):
 	if Input.is_action_pressed("right") or an_right:
 		velocity.x = 1
 		$AnimationPlayer/AnimationTree["parameters/idle/blend_position"] = velocity.x
+		$AnimationPlayer/AnimationTree["parameters/walk/blend_position"] = velocity.x
+		$AnimationPlayer/AnimationTree["parameters/playback"].travel("walk")
 	elif Input.is_action_pressed("left") or an_left:
 		velocity.x = -1
 		$AnimationPlayer/AnimationTree["parameters/idle/blend_position"] = velocity.x
+		$AnimationPlayer/AnimationTree["parameters/walk/blend_position"] = velocity.x
+		$AnimationPlayer/AnimationTree["parameters/playback"].travel("walk")
 	move_and_collide(velocity*speed*delta)
+	if velocity == Vector2.ZERO:
+		$AnimationPlayer/AnimationTree["parameters/playback"].travel("idle")
 	velocity = Vector2.ZERO
 #взаимодействие и подсветка объекта
 	if ray.is_colliding():
