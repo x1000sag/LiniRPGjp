@@ -12,7 +12,14 @@ func _ready():
 	$interact.scale = SC.current_aspect
 	$left.scale = SC.current_aspect
 	$menu.scale = SC.current_aspect
+	SC.update_aspect.connect(update_scale)
 
+func update_scale():
+	$right.scale = SC.current_aspect
+	$interact.scale = SC.current_aspect
+	$left.scale = SC.current_aspect
+	$menu.scale = SC.current_aspect
+	
 func _on_right_button_down():
 	emit_signal("an_right_s", true)
 func _on_right_button_up():

@@ -14,6 +14,10 @@ func _ready():
 	$AnimationPlayer/AnimationTree.active = true
 	$AnimationPlayer.active = true
 	$Sprite2D.scale = SC.current_aspect
+	SC.update_aspect.connect(update_scale)
+
+func update_scale():
+	$Sprite2D.scale = SC.current_aspect
 
 func _physics_process(delta):
 #движение

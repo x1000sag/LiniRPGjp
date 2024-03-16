@@ -1,5 +1,7 @@
 extends Node
 
+signal update_aspect
+
 #оригенальное соотношеніе сторонъ
 const x = 16.0
 const y = 9.0
