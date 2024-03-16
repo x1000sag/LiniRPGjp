@@ -102,11 +102,11 @@ offset_top = 55.16
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_icoqw")
-region_rect = Rect2(58, -18, 3406, 648)
+region_rect = Rect2(-1, -1, 1920, 383)
 patch_margin_left = 83
-patch_margin_top = 142
+patch_margin_top = 98
 patch_margin_right = 83
-patch_margin_bottom = 150
+patch_margin_bottom = 85
 
 [node name="RichTextLabel" type="RichTextLabel" parent="dialog/NinePatchRect"]
 layout_mode = 0

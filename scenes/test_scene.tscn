@@ -14,7 +14,7 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8wduo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wks6"]
-size = Vector2(215.5, 1081)
+size = Vector2(192.75, 1081)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xju26"]
 shader = ExtResource("6_f2hy8")
@@ -25,6 +25,7 @@ size = Vector2(104, 1097)
 [node name="Test_scene" type="Node2D"]
 
 [node name="android_controls" parent="." instance=ExtResource("5_ckwps")]
+visible = false
 
 [node name="dialog" parent="." instance=ExtResource("4_jd0lo")]
 unique_name_in_owner = true
@@ -57,7 +58,7 @@ shape = SubResource("RectangleShape2D_0wks6")
 debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="wall"]
-position = Vector2(3532, 538.5)
+position = Vector2(3520.63, 538.5)
 shape = SubResource("RectangleShape2D_0wks6")
 debug_color = Color(0, 0.6, 0.701961, 0)
 

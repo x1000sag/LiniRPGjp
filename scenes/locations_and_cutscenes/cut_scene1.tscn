@@ -12,7 +12,6 @@ script = ExtResource("1_xgx4f")
 [node name="init_window_component" parent="." instance=ExtResource("1_h83ta")]
 
 [node name="dialog" parent="." instance=ExtResource("2_h2pc0")]
-dialog_pos_top = true
 
 [node name="android_controls" parent="." instance=ExtResource("3_p32ik")]
 visible = false
