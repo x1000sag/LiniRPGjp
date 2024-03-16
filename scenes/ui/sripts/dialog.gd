@@ -3,12 +3,17 @@ extends CanvasLayer
 @onready var text = $dialog/NinePatchRect/RichTextLabel
 @onready var dialog_ui = $dialog
 @onready var Name = $dialog/NinePatchRect/Label
+@export var dialog_pos_top:bool = false
 
 func _ready():
 	GD.start_choice.connect(start_choice)
 	GD.start_dialog.connect(start_dialog)
+	if dialog_pos_top:
+		$dialog/NinePatchRect.position = Vector2.ZERO
 
 func start_dialog(dialog : String):
+	GD.current_phrase = ""
+	GD.current_phrase = dialog
 	dialog_ui.visible = true
 #	добавление в очередь фразы по тегу
 	GD.queue.assign(GD.phrases[dialog])
@@ -16,6 +21,8 @@ func start_dialog(dialog : String):
 	if GD.queue.size() != 0:
 			text.text = GD.queue[0]
 			GD.queue.erase(text.text)
+	else:
+		GD.emit_signal("dialog_ended")
 	Name.text = GD.who_talks(text.text)
 
 func start_choice(option_set):

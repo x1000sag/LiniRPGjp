@@ -1,11 +1,12 @@
 extends Node
 
 #Вызывается, когда диалог закочился
-signal dialog_ended
+signal dialog_ended(phrase)
 #Вызывается, когда инициируется выбор
 signal start_choice(option_set)
 signal start_dialog(phrase)
 
+var current_phrase: String
 #очередь фраз
 @onready var queue : Array
 #теги для диалога(список фраз нужные для диалога)
