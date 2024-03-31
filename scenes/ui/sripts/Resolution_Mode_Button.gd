@@ -24,4 +24,4 @@ func add_resolution_items() -> void:
 func on_resolution_selected(index : int) -> void:
 	SC.current_aspect = RESOLUTION_DICTIONARY.values()[index]
 	SC.emit_signal("update_aspect")
-	#DisplayServer.window_set_size(RESOLUTION_DICTIONARY.values()[index])
+#въ этой функціи сохранить index

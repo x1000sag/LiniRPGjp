@@ -33,6 +33,7 @@ func on_window_mode_selected(index : int) -> void:
 		3: #Borderless full-Screen
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
+#Въ этой функціи сохранить index
 
 func _on_button_pressed():
 	get_parent().add_child(child)
