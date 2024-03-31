@@ -16,6 +16,7 @@ const RESOLUTION_DICTIONARY : Dictionary = {
 func _ready():
 	option_button.item_selected.connect(on_resolution_selected)
 	add_resolution_items()
+#загрузить сохраннённый индексъ и вставить его въ option_button.select(index), где index загруженъ изъ файла
 	
 func add_resolution_items() -> void:	
 	for resolution_size_text in RESOLUTION_DICTIONARY:

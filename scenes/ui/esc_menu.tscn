@@ -153,8 +153,8 @@ vertical_alignment = 1
 clip_text = true
 uppercase = true
 
-[connection signal="pressed" from="Resume" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Resume" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

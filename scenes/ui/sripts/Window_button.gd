@@ -14,6 +14,7 @@ const WINDOW_MODE_ARRAY : Array[String] = [
 func _ready():
 	add_window_mode_items()
 	option_button.item_selected.connect(on_window_mode_selected)
+	#загрузить сохраннённый индексъ и вставить его въ option_button.select(index), где index загруженъ изъ файла
 
 func add_window_mode_items() -> void:
 	for window_mode in WINDOW_MODE_ARRAY:
