@@ -4,6 +4,7 @@ extends CanvasLayer
 @onready var child = Menu.instantiate()
 
 func _on_exit_pressed():
+	SAVE.save_file()
 	get_tree().quit()
 
 func _on_settings_pressed():
@@ -15,4 +16,5 @@ func _on_settings_pressed():
 		queue_free()
 
 func _on_resume_pressed():
+	G.paused = false
 	queue_free()

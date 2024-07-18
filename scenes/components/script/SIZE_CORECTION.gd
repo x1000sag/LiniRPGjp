@@ -2,7 +2,7 @@ extends Node
 
 signal update_aspect
 
-#оригенальное соотношеніе сторонъ
+#оригинальное соотношеніе сторонъ
 const x = 16.0
 const y = 9.0
 
@@ -28,7 +28,7 @@ const pc4 = Vector2(x/4.0, y/3.0)
 func _ready():
 #установка соотношенія сторонъ по умолчанію
 	var resolution = DisplayServer.screen_get_size()
-	if !G.is_played:
+	if !SAVE.is_played:
 		current_aspect = pc1
 		match float(resolution.x) / float(resolution.y):
 			18.0/9.0:
@@ -47,3 +47,4 @@ func _ready():
 				current_aspect = pc3
 			4.0/3.0:
 				current_aspect = pc4
+

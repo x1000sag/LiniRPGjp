@@ -21,30 +21,31 @@ func update_scale():
 
 func _physics_process(delta):
 #движение
-	if Input.is_action_pressed("right") or an_right:
-		velocity.x = 1
-		$AnimationPlayer/AnimationTree["parameters/idle/blend_position"] = velocity.x
-		$AnimationPlayer/AnimationTree["parameters/walk/blend_position"] = velocity.x
-		$AnimationPlayer/AnimationTree["parameters/playback"].travel("walk")
-	elif Input.is_action_pressed("left") or an_left:
-		velocity.x = -1
-		$AnimationPlayer/AnimationTree["parameters/idle/blend_position"] = velocity.x
-		$AnimationPlayer/AnimationTree["parameters/walk/blend_position"] = velocity.x
-		$AnimationPlayer/AnimationTree["parameters/playback"].travel("walk")
-	move_and_collide(velocity*speed*delta)
-	if velocity == Vector2.ZERO:
-		$AnimationPlayer/AnimationTree["parameters/playback"].travel("idle")
-	velocity = Vector2.ZERO
-#взаимодействие и подсветка объекта
-	if ray.is_colliding():
-		colider = ray.get_collider()
-		colider.highlight(true)
-		if Input.is_action_just_pressed("interact") or an_interact and colider.has_method("interacted"):
-			colider.interacted(self)
-	else:
-		if colider != null:
-			colider.highlight(false)
-		colider = null
+	if !G.paused:
+		if Input.is_action_pressed("right") or an_right:
+			velocity.x = 1
+			$AnimationPlayer/AnimationTree["parameters/idle/blend_position"] = velocity.x
+			$AnimationPlayer/AnimationTree["parameters/walk/blend_position"] = velocity.x
+			$AnimationPlayer/AnimationTree["parameters/playback"].travel("walk")
+		elif Input.is_action_pressed("left") or an_left:
+			velocity.x = -1
+			$AnimationPlayer/AnimationTree["parameters/idle/blend_position"] = velocity.x
+			$AnimationPlayer/AnimationTree["parameters/walk/blend_position"] = velocity.x
+			$AnimationPlayer/AnimationTree["parameters/playback"].travel("walk")
+		move_and_collide(velocity*speed*delta)
+		if velocity == Vector2.ZERO:
+			$AnimationPlayer/AnimationTree["parameters/playback"].travel("idle")
+		velocity = Vector2.ZERO
+	#взаимодействие и подсветка объекта
+		if ray.is_colliding():
+			colider = ray.get_collider()
+			colider.highlight(true)
+			if Input.is_action_just_pressed("interact") or an_interact and colider.has_method("interacted"):
+				colider.interacted(self)
+		else:
+			if colider != null:
+				colider.highlight(false)
+			colider = null
 
 #управление с андроида
 func _on_android_controls_an_left_s(BOOL):

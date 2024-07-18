@@ -23,6 +23,7 @@ GD="*res://scenes/components/script/GLOBAL_DIALOG.gd"
 PD="*res://scenes/components/script/PLAYER_DATA.gd"
 SC="*res://scenes/components/script/SIZE_CORECTION.gd"
 I="*res://scenes/components/script/ITEMS.gd"
+SAVE="*res://scenes/components/scripts/SAVE_SYSTEM.gd"
 
 [display]
 

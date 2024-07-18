@@ -14,6 +14,9 @@ const WINDOW_MODE_ARRAY : Array[String] = [
 func _ready():
 	add_window_mode_items()
 	option_button.item_selected.connect(on_window_mode_selected)
+	SAVE.load_file()
+	option_button.select(SAVE.window_mode)
+	on_window_mode_selected(SAVE.window_mode)
 	#загрузить сохраннённый индексъ и вставить его въ option_button.select(index), где index загруженъ изъ файла
 
 func add_window_mode_items() -> void:
@@ -34,7 +37,8 @@ func on_window_mode_selected(index : int) -> void:
 		3: #Borderless full-Screen
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
-#Въ этой функціи сохранить index
+	SAVE.window_mode = index
+	SAVE.save_file()
 
 func _on_button_pressed():
 	get_parent().add_child(child)
