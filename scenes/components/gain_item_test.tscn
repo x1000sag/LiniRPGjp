@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cruv3g0shm65o"]
+
+[ext_resource type="Script" path="res://scenes/components/script/gain_item_test.gd" id="1_yypx3"]
+[ext_resource type="Texture2D" uid="uid://dx7a50s751rn4" path="res://icon.svg" id="2_45on0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tej62"]
+size = Vector2(140, 138)
+
+[node name="gain_item_test" type="Area2D"]
+script = ExtResource("1_yypx3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tej62")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_45on0")

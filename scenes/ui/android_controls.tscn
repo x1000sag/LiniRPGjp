@@ -1,45 +1,55 @@
-[gd_scene load_steps=6 format=3 uid="uid://ch5xms4qvyosu"]
+[gd_scene load_steps=9 format=3 uid="uid://ch5xms4qvyosu"]
 
-[ext_resource type="Texture2D" uid="uid://c3uvl2jtrwgix" path="res://resources/textures/android_controls/Interact.png" id="1_bkykj"]
+[ext_resource type="Texture2D" uid="uid://c3uvl2jtrwgix" path="res://resources/textures/android_controls/interact.png" id="1_bkykj"]
 [ext_resource type="Script" path="res://scenes/ui/sripts/android_controls.gd" id="1_im1h1"]
 [ext_resource type="Texture2D" uid="uid://yd07jofs38s8" path="res://resources/textures/android_controls/right.png" id="2_y3g7i"]
+[ext_resource type="Texture2D" uid="uid://0g3hieusm3v1" path="res://resources/textures/android_controls/right_down.png" id="3_4qs8x"]
 [ext_resource type="Texture2D" uid="uid://cnrxkrur1c2th" path="res://resources/textures/android_controls/Left.png" id="4_at5px"]
-[ext_resource type="Texture2D" uid="uid://dx7a50s751rn4" path="res://icon.svg" id="5_7bxxl"]
+[ext_resource type="Texture2D" uid="uid://csamceghb242a" path="res://resources/textures/android_controls/interact_down.png" id="5_40qem"]
+[ext_resource type="Texture2D" uid="uid://gda0ilyfvq6v" path="res://resources/textures/android_controls/pause.png" id="6_jhjty"]
+[ext_resource type="Texture2D" uid="uid://dk8qqj7xyms5e" path="res://resources/textures/android_controls/left_down.png" id="7_pfo4c"]
 
 [node name="android_controls" type="CanvasLayer"]
 script = ExtResource("1_im1h1")
 
 [node name="right" type="TextureButton" parent="."]
 offset_left = 477.0
-offset_top = 673.0
-offset_right = 783.0
+offset_top = 749.0
+offset_right = 706.0
 offset_bottom = 974.0
 texture_normal = ExtResource("2_y3g7i")
+texture_pressed = ExtResource("3_4qs8x")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="interact" type="TextureButton" parent="."]
 offset_left = 1487.0
-offset_top = 673.0
-offset_right = 1789.0
+offset_top = 749.0
+offset_right = 1714.0
 offset_bottom = 978.0
 texture_normal = ExtResource("1_bkykj")
+texture_pressed = ExtResource("5_40qem")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="left" type="TextureButton" parent="."]
 offset_left = 128.0
-offset_top = 673.0
-offset_right = 434.0
+offset_top = 749.0
+offset_right = 357.0
 offset_bottom = 974.0
 texture_normal = ExtResource("4_at5px")
+texture_pressed = ExtResource("7_pfo4c")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="menu" type="TextureButton" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-texture_normal = ExtResource("5_7bxxl")
+offset_left = 50.0
+offset_top = 51.0
+offset_right = 110.0
+offset_bottom = 111.0
+texture_normal = ExtResource("6_jhjty")
+ignore_texture_size = true
+stretch_mode = 0
 
 [connection signal="button_down" from="right" to="." method="_on_right_button_down"]
 [connection signal="button_up" from="right" to="." method="_on_right_button_up"]
